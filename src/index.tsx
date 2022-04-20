@@ -1,11 +1,5 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './styles/index.css'
-import App from './App'
-import {BrowserRouter as Router} from 'react-router-dom'
+import {createRoot} from 'react-dom/client'
+import {AppRouter} from './containers/AppRouter'
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLDivElement).render(
-    <Router basename={process.env.PUBLIC_URL}>
-            <App/>
-    </Router>
-)
+createRoot(document.getElementById('root') as HTMLDivElement).render(<AppRouter/>)
