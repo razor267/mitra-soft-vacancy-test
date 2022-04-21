@@ -8,5 +8,14 @@ $white: #ffffff;
 }
 
 body {
-    overflow-y: scroll;
+    //overflow-y: scroll;
+}
+
+.link {
+    color: $white;
+    text-decoration: none;
+
+    &:hover {
+        color: $white;
+    }
 }
