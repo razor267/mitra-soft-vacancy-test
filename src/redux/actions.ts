@@ -1,6 +1,11 @@
+import {ImageType} from '../types/types'
+
 export const actions = {
-    //Первичное добавление всех изображений в стейт после их получения с сервера
     getImages: () => ({
         type: 'GET_IMAGES'
-    } as const)
+    } as const),
+    addAllImages: (images: ImageType[]) => ({
+        type: 'ADD_ALL_IMAGES',
+        images
+    } as const),
 }
