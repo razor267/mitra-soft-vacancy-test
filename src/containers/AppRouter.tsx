@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Layout from './Layout'
 import Suspense from './Suspense'
+import {Provider} from 'react-redux'
+import {store} from '../redux/store'
 
 const Gallery = React.lazy(()=> import('../pages/Gallery'))
 const AboutMe = React.lazy(()=> import('../pages/AboutMe'))
@@ -12,7 +14,8 @@ const ImageItem = React.lazy(()=> import('../pages/ImageItem'))
 const Page404 = React.lazy(()=> import('../pages/Page404'))
 
 export const AppRouter = () => (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Provider store={store}>
+        <Router basename={process.env.PUBLIC_URL}>
         <Routes>
             <Route path='/' element={<Layout/>}>
                 <Route index element={<Suspense component={<Gallery/>}/>}/>
@@ -22,4 +25,5 @@ export const AppRouter = () => (
             </Route>
         </Routes>
     </Router>
+    </Provider>
 )
