@@ -1,8 +1,9 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import {actions} from '../../redux/actions'
 import {StateType} from '../../types/types'
-import {Button, Card, Col, Container, Row} from 'react-bootstrap'
+import {Button, Card, Col, Container, OverlayTrigger, Row} from 'react-bootstrap'
+import ImageCard from '../../components/Card'
 
 const Gallery = () => {
     const dispatch = useDispatch()
@@ -16,10 +17,7 @@ const Gallery = () => {
         <Container fluid className="d-grid mt-2">
             <Row xs="auto" className="gap-2">
                 {images.map(item => <Col key={item.id}>
-                        <Card style={{width: '12rem'}}>
-                            <Card.Img variant="top" src={item.url}/>
-                            <Button>click</Button>
-                        </Card>
+                    <ImageCard url={item.url}/>
                 </Col>)}
             </Row>
         </Container>
