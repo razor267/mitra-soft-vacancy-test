@@ -36,9 +36,9 @@ const Gallery = () => {
                 className="gap-2 bg-secondary p-2"
                 key={index}
             >
-                <Row>Альбом {index + 1}</Row>
+                <Row><h4 className="text-center">Альбом {index + 1}</h4></Row>
                 <Row className="gap-2">{newImages[index].map(item => <Col key={item.id}>
-                    <ImageCard url={item.url}/>
+                    <ImageCard img={item}/>
                 </Col>)}</Row>
             </Row>)}
         </Container>

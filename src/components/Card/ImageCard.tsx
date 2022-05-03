@@ -1,15 +1,21 @@
 import React, {FC, useState} from 'react'
 import {Button, Card} from 'react-bootstrap'
+import {useNavigate} from 'react-router-dom'
+import {ImageType} from '../../types/types'
 
 type PropsType = {
-    url: string
+    img: ImageType
 }
-const ImageCard: FC<PropsType> = ({url}) => {
+const ImageCard: FC<PropsType> = ({img}) => {
+
+    const {url, id} = img
 
     const [show, setShow] = useState(false)
 
     const handleClose = () => setShow(false)
     const handleShow = () => setShow(true)
+
+    const navigate = useNavigate()
 
     return (
         <Card style={{width: '12rem'}} onMouseEnter={handleShow} onMouseLeave={handleClose}>
@@ -22,6 +28,7 @@ const ImageCard: FC<PropsType> = ({url}) => {
                     left: '50%',
                     transform: 'translate(-50%, -50%)'
                 }}
+                onClick={()=>navigate(`/${id}`)}
             >Подробнее
             </Button>}
         </Card>
