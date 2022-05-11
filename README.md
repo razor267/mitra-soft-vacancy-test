@@ -1,46 +1,55 @@
-# Getting Started with Create React AppRouter
+# mitra-soft-vacancy-test
 
-This project was bootstrapped with [Create React AppRouter](https://github.com/facebook/create-react-app).
+Проект был разработан как тестовое задание от HR-менеджера.
 
-## Available Scripts
+## Задание на разработку
 
-In the project directory, you can run:
+К сожалению задание на разработку скопирать сюда не удасться по причине того что задание было на hh на странице отклика на вакансию(вакансия уже в архиве и нет доступа к этой странице).
 
-### `npm start`
+Абсолютно скучный проект, поэтому даже не вижу смысла выкладывать внешний вид интерфейса, деплоить куда-либо его.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Если кратко то задание на разработку было следующим:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- В шапке есть меню бургер. При нажатии на кнопку слева всплывает меню в котором есть моя аватарка, имя, почта, ссылки на 2 страницы("Главная" и "Обо мне").
+- На главной странице отображаются 24 картинки которые разбиты на 4 категории(по 6 в каждой). Картинки запрашиваются с сервера всеми известного ресурса JSONPlaceholder.
+- При наведении на картинку на ней появляется кнопка "Подробнее" при нажатии на которую открывается страница с этой картинкой, её описанием, ссылкой на нее и кнопкой "Назад"
+- Страница "Обо мне" должна содержать информацию о разработчике в любом виде.
 
-### `npm test`
+Вот и всё.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Ограничения которые накладывались на разработку:
+- Обязательное использование **react-bootstrap** (все элементы интерфейса должны использоваться из данной бибилиотеки)
+- Обязательно использовать **Redux-Saga**
 
-### `npm run build`
+## Результат
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Задание было выполнено в полном объёме.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Сторонние библиотеки, используемые в проекте:
+  - **axios** (взаимодействие с API)
+  - **redux-saga** (отвечает за стейтменеджемент)
+  - **react-bootstrap** (UI)
+  - **react-router-dom** (роутинг приложения)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Start
+```bash
+npm start
+```
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React AppRouter documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+<div align="right">
+  <a href="https://reactjs.org/">
+    <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="React" width="40" height="40"/>&nbsp;
+  </a>
+  <a href="https://redux.js.org/">
+    <img src="https://github.com/devicons/devicon/blob/master/icons/redux/redux-original.svg" title="Redux" alt="Redux " width="40" height="40"/>&nbsp;
+  </a>
+   <a href="https://www.typescriptlang.org/">    
+    <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-plain.svg" title="TypeScript" alt="TypeScript" width="40" height="40"/>&nbsp;
+  </a>
+  <a href="https://html.spec.whatwg.org/">    
+    <img src="https://github.com/devicons/devicon/blob/master/icons/html5/html5-original.svg" title="HTML5" alt="HTML" width="40" height="40"/>&nbsp;
+  </a>
+  <a href="https://getbootstrap.com/">    
+     <img src="https://github.com/devicons/devicon/blob/master/icons/bootstrap/bootstrap-original.svg" title="Bootstrap" **alt="Bootstrap" width="40" height="40"/>
+  </a>
+</div>
